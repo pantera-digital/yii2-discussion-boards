@@ -1,6 +1,6 @@
 <div class="media" style="border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 10px 0" onclick="location.href = '<?=\yii\helpers\Url::to(['/discussion/default/view','id' => $model->id])?>'">
     <div class="media-left">
-        <img class="media-object" src="<?=$model->avatarUrl ?>" width="60" alt="<?=$model->title ?>" style="border-radius: 50px; margin-top: 13px;">
+        <img class="media-object" src="<?=$model->getAvatar() ?>" width="60" alt="<?=$model->title ?>" style="border-radius: 50px; margin-top: 13px;">
         <?php if (0 && ($model->user_id == Yii::$app->user->id)) : ?>
         <?= $model->user_id == Yii::$app->user->id ? '<a style="font-size:11px;" href="'.\yii\helpers\Url::to(['/discussion/default/view','id' => $model->id]).'">редактировать</a>' : ''?>
         <a style="font-size:11px; color:#bd362f" href="<?=\yii\helpers\Url::to(['/discussion/default/view','id' => $model->id])?>" title="Удалить" aria-label="Удалить" data-pjax="0" data-confirm="Вы уверены, что хотите удалить этот элемент?" data-method="post">удалить</a>

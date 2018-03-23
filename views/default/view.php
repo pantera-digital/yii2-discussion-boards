@@ -34,7 +34,7 @@ html, body {
 
 
             <div class="text-center">
-                <img src="<?=$model->avatarUrl ?>" width="60" alt="<?=$model->title ?>" style="border-radius: 50px; margin-top: -55px;">
+                <img src="<?=$model->getAvatar() ?>" width="60" alt="<?=$model->title ?>" style="border-radius: 50px; margin-top: -55px;">
             </div>
 
             <div class="text-left" style="position: absolute; margin: -25px 0 0 -8px; z-index: 100">
