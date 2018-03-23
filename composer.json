@@ -6,5 +6,7 @@
             "pantera\\discussions\\": ""
         }
     },
-    "require": {}
+    "require": {
+        "yii2mod/yii2-comments": "*"
+    }
 }
