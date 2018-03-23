@@ -1,0 +1,10 @@
+{
+    "name": "pantera-digital/yii2-discussion-boards",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "pantera\\discussions\\": ""
+        }
+    },
+    "require": {}
+}
