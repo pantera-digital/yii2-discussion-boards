@@ -7,6 +7,8 @@
         }
     },
     "require": {
-        "yii2mod/yii2-comments": "*"
+        "yii2mod/yii2-comments": "*",
+        "2amigos/yii2-ckeditor-widget": "^2.0",
+        "rmrevin/yii2-fontawesome": "~2.17"
     }
 }

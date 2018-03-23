@@ -12,7 +12,9 @@ class Module extends YiiModule {
 
     public $access = ['@'];
 
-    public $userModel;
+    public $userModel = null;
+
+    public $userAvatarPropertity = null;
 
     public function init()
     {
