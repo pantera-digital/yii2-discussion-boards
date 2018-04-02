@@ -17,6 +17,7 @@ use yii\filters\VerbFilter;
  */
 class DefaultController extends Controller
 {
+
     /**
      * @inheritdoc
      */
@@ -94,6 +95,7 @@ class DefaultController extends Controller
      */
     public function actionUpdate($id)
     {
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

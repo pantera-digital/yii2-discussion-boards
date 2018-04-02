@@ -11,9 +11,8 @@ class Module extends YiiModule {
     public $identityModel = 'common\models\User';
 
     public $access = ['@'];
-
+    public $deleteAccess = ['admin'];
     public $userModel = null;
-
     public $userAvatarPropertity = null;
 
     public function init()
@@ -22,6 +21,13 @@ class Module extends YiiModule {
         if(!$this->userModel) {
             throw new InvalidConfigException('Пожалуйста укажите путь до модели пользователя в конфиге модуля');
         }
+    }
+
+    public function isCanDelete() {
+        foreach ($this->deleteAccess as $access) {
+            if(\Yii::$app->user->can($access)) return true;
+        }
+        return false;
     }
 
 }

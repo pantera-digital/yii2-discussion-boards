@@ -44,7 +44,9 @@ html, body {
             <?php if (($model->user_id == Yii::$app->user->id) || Yii::$app->user->can('administrator')) : ?>
                 <div class=" text-right" style="position: absolute; margin: -25px 0 0 -5px; width: 97.5%">
                     <a class="btn btn-link btn-xs" style="color: #000" href="<?=\yii\helpers\Url::to(['/discussion/default/update','id' => $model->id])?>"><?= FA::icon('pencil') ?></a>
+                    <?php if(Yii::$app->user->id == $model->user_id || Yii::$app->getModule('discussion')->isCanDelete()):?>
                     <a href="<?=\yii\helpers\Url::to(['/discussion/default/delete','id' => $model->id])?>" class="btn btn-link btn-xs" style="color: #000" title="Удалить" aria-label="Удалить" data-pjax="0" data-confirm="Вы уверены, что хотите удалить этот элемент?" data-method="post"><?= FA::icon('trash') ?></a>
+                    <?php endif;?>
                 </div>
             <?php endif;?>
 
