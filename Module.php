@@ -26,4 +26,8 @@ class Module extends YiiModule {
         return false;
     }
 
+    public function getMenuItems()
+    {
+        return [['label' => 'Обсуждения', 'url' => ['/discussion'], 'icon' => 'comments', 'active' => \Yii::$app->controller->module->id == 'discussion']];
+    }
 }
