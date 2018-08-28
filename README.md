@@ -26,3 +26,16 @@ Run migrations:
 ```
 php yii migrate --migrationPath=vendor/pantera-digital/yii2-discussion-boards/migrations
 ```
+
+Configure
+---------------------------------
+
+Add to your config `modules` section:
+
+```
+'discussion' => [
+    'class' => 'pantera\discussions\Module',
+    'access' => ['@'],
+    'userModel' => 'app\models\User',
+],
+```
