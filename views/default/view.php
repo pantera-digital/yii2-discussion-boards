@@ -51,8 +51,10 @@ html, body {
             <?php endif;?>
 
             <div class="text-center" style="margin-top: 5px; font-size: 13px;">
-                Разместил
-                <?=$model->user->username ?> &bull;
+                <?php if ($model->user): ?>
+                    Разместил
+                    <?=$model->user->username ?> &bull;
+                <?php endif; ?>
                 <?= Yii::$app->formatter->asDate(date('Y-m-d',strtotime($model->created_at))) ?>
             </div>
 

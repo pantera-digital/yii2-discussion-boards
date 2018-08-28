@@ -55,7 +55,7 @@ class MessageBoards extends \yii\db\ActiveRecord
         ];
     }
     public function getUser(){
-        return $this->hasOne(Yii::$app->getModule('discussion')->userModel,['id'=> 'user_id']);
+        return Yii::$app->getModule('discussion')->userModel ? $this->hasOne(Yii::$app->getModule('discussion')->userModel,['id'=> 'user_id']) : null;
     }
 
     public function getCommentsCount(){

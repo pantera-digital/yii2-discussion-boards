@@ -9,13 +9,11 @@
 
     <div class="media-body">
         <div style="color: #aa9c84; font-size: 13px;">
-            <?=$model->user->username ?> &bull;
+            <?php if ($model->user): ?>
+                <?=$model->user->username ?> &bull;
+            <?php endif; ?>
             <?= Yii::$app->formatter->asDate(date('Y-m-d',strtotime($model->created_at))) ?>
-
             <span class="label label-primary pull-right"><?=$model->commentsCount ?></span>
-
-
-
         </div>
         <div style="line-height: 1.6em;">
             <b><?=$model->title?></b> &mdash;
